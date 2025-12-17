@@ -413,39 +413,51 @@ function Contact() {
         </div>
 
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <form>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            {/* Web3Forms Access Key */}
+            <input type="hidden" name="access_key" value="5e40aef4-2df8-4d0a-9137-198eced2cfaf" />
+
+            {/* Redirect after submission (optional) */}
+            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+
+            {/* Email subject */}
+            <input type="hidden" name="subject" value="New Contact Form Submission - Akshar Production" />
+
+            {/* From name in email */}
+            <input type="hidden" name="from_name" value="Akshar Production Website" />
+
             <div className="form-group">
               <label className="form-label">Your Name</label>
-              <input type="text" className="form-input" placeholder="John Doe" required />
+              <input type="text" name="name" className="form-input" placeholder="John Doe" required />
             </div>
 
             <div className="form-group">
               <label className="form-label">Email Address</label>
-              <input type="email" className="form-input" placeholder="john@example.com" required />
+              <input type="email" name="email" className="form-input" placeholder="john@example.com" required />
             </div>
 
             <div className="form-group">
               <label className="form-label">Phone Number</label>
-              <input type="tel" className="form-input" placeholder="+91 98765 43210" />
+              <input type="tel" name="phone" className="form-input" placeholder="+91 98765 43210" />
             </div>
 
             <div className="form-group">
               <label className="form-label">Service Interested In</label>
-              <select className="form-input">
+              <select name="service" className="form-input">
                 <option value="">Select a service</option>
-                <option value="web-development">Web Development</option>
-                <option value="social-media">Social Media Marketing</option>
-                <option value="paid-ads">Paid Advertising</option>
-                <option value="graphic-design">Graphic Design</option>
-                <option value="video-editing">Video Editing</option>
-                <option value="web-apps">Web Applications</option>
-                <option value="other">Other</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Social Media Marketing">Social Media Marketing</option>
+                <option value="Paid Advertising">Paid Advertising</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Video Editing">Video Editing</option>
+                <option value="Web Applications">Web Applications</option>
+                <option value="Other">Other</option>
               </select>
             </div>
 
             <div className="form-group">
               <label className="form-label">Your Message</label>
-              <textarea className="form-textarea" placeholder="Tell us about your project..." rows={5}></textarea>
+              <textarea name="message" className="form-textarea" placeholder="Tell us about your project..." rows={5}></textarea>
             </div>
 
             <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
