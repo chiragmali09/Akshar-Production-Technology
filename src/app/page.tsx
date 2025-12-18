@@ -37,14 +37,29 @@ function Header() {
           </div>
 
           <button
-            className="mobile-menu-btn"
+            className={`mobile-menu-btn ${mobileMenuOpen ? 'open' : ''}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             <span></span>
             <span></span>
             <span></span>
           </button>
         </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <nav className="mobile-nav">
+          <a href="#services" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</a>
+          <a href="#portfolio" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Portfolio</a>
+          <a href="#process" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Process</a>
+          <a href="#testimonials" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
+          <a href="#contact" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+          <div style={{ marginTop: '24px' }}>
+            <a href="#contact" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>Get Started</a>
+          </div>
+        </nav>
       </div>
     </header>
   );

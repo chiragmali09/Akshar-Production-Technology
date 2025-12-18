@@ -5,48 +5,48 @@
    ========================================= */
 
 :root {
-  /* Primary Colors */
-  --primary: #6366F1;
-  --primary-light: #818CF8;
-  --primary-dark: #4F46E5;
+  /* Primary Colors - Deep Blue (Heavy) */
+  --primary: #1e3a8a;
+  --primary-light: #3b82f6;
+  --primary-dark: #172554;
 
   /* Secondary Colors */
-  --secondary: #06B6D4;
-  --secondary-light: #22D3EE;
-  --secondary-dark: #0891B2;
+  --secondary: #0891b2;
+  --secondary-light: #22d3ee;
+  --secondary-dark: #155e75;
 
   /* Accent Colors */
-  --accent: #F97316;
-  --accent-light: #FB923C;
-  --accent-dark: #EA580C;
+  --accent: #f97316;
+  --accent-light: #fb923c;
+  --accent-dark: #ea580c;
 
-  /* Background Colors */
-  --background: #0A0A0F;
-  --background-secondary: #12121A;
-  --background-tertiary: #1A1A24;
-  --surface: rgba(255, 255, 255, 0.03);
-  --surface-hover: rgba(255, 255, 255, 0.06);
+  /* Background Colors - Light Mode */
+  --background: #ffffff;
+  --background-secondary: #f8fafc;
+  --background-tertiary: #f1f5f9;
+  --surface: #ffffff;
+  --surface-hover: #f8fafc;
 
   /* Text Colors */
-  --foreground: #FFFFFF;
-  --foreground-secondary: #A1A1AA;
-  --foreground-muted: #71717A;
+  --foreground: #0f172a;
+  --foreground-secondary: #475569;
+  --foreground-muted: #94a3b8;
 
   /* Border & Dividers */
-  --border: rgba(255, 255, 255, 0.1);
-  --border-hover: rgba(255, 255, 255, 0.2);
+  --border: #e2e8f0;
+  --border-hover: #cbd5e1;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #EC4899 100%);
+  --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #ec4899 100%);
   --gradient-dark: linear-gradient(180deg, var(--background) 0%, var(--background-secondary) 100%);
-  --gradient-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(99, 102, 241, 0.15), transparent 40%);
+  --gradient-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59, 130, 246, 0.15), transparent 40%);
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 60px rgba(99, 102, 241, 0.3);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+  --shadow-glow: 0 0 40px rgba(30, 58, 138, 0.2);
 
   /* Spacing */
   --container-max: 1400px;
@@ -156,7 +156,7 @@ body {
 
 /* Glassmorphism */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border);
@@ -576,8 +576,8 @@ p {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 30% 30%, rgba(30, 58, 138, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(8, 145, 178, 0.08) 0%, transparent 50%);
 }
 
 .hero-glow {
@@ -587,7 +587,7 @@ p {
   transform: translateX(-50%);
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.15) 0%, transparent 70%);
   filter: blur(60px);
   animation: pulse-glow 4s ease-in-out infinite;
 }
@@ -808,7 +808,7 @@ p {
 .service-card:hover {
   transform: translateY(-8px);
   border-color: var(--primary);
-  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 20px 60px rgba(30, 58, 138, 0.1);
 }
 
 .service-card:hover::before {
@@ -818,7 +818,7 @@ p {
 .service-icon {
   width: 64px;
   height: 64px;
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(30, 58, 138, 0.05);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -1358,7 +1358,7 @@ p {
 .form-textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
 }
 
 .form-input::placeholder,
@@ -1374,7 +1374,7 @@ p {
 /* Fix for select dropdown options visibility */
 select.form-input {
   appearance: none;
-  color-scheme: dark;
+  color-scheme: light;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239CA3AF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
@@ -1384,8 +1384,8 @@ select.form-input {
 }
 
 select.form-input option {
-  background-color: #1a1a24 !important;
-  color: #ffffff !important;
+  background-color: var(--surface) !important;
+  color: var(--foreground) !important;
   padding: 12px;
 }
 
@@ -1411,4 +1411,58 @@ select.form-input option {
   .hide-desktop {
     display: none;
   }
+}
+
+/* =========================================
+   MOBILE MENU
+   ========================================= */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--background);
+  z-index: 999;
+  padding: 100px 24px 40px;
+  transform: translateX(100%);
+  transition: transform var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.mobile-nav-link {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--foreground);
+  text-decoration: none;
+  position: relative;
+}
+
+.mobile-nav-link:hover {
+  color: var(--primary);
+}
+
+/* Hamburger Animation */
+.mobile-menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }

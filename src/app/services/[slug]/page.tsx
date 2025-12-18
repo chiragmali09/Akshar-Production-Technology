@@ -221,7 +221,7 @@ export default function ServicePage() {
                 <section style={{
                     paddingTop: "160px",
                     paddingBottom: "80px",
-                    background: "linear-gradient(180deg, rgba(99, 102, 241, 0.1) 0%, transparent 100%)"
+                    background: "linear-gradient(180deg, rgba(30, 58, 138, 0.1) 0%, transparent 100%)"
                 }}>
                     <div className="container">
                         <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
