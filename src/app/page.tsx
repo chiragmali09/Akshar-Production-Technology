@@ -20,11 +20,11 @@ function Header() {
       <div className="container">
         <div className="header-inner">
           <a href="/" className="logo">
-            <div className="logo-icon">A</div>
-            <span>Akshar</span>
+            <img src="/logo.png" alt="Akshar Production" className="logo-img" />
           </a>
 
           <nav className="nav">
+            <a href="#products" className="nav-link">Products</a>
             <a href="#services" className="nav-link">Services</a>
             <a href="#portfolio" className="nav-link">Portfolio</a>
             <a href="#process" className="nav-link">Process</a>
@@ -51,6 +51,7 @@ function Header() {
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <nav className="mobile-nav">
+          <a href="#products" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Products</a>
           <a href="#services" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</a>
           <a href="#portfolio" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Portfolio</a>
           <a href="#process" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Process</a>
@@ -69,8 +70,13 @@ function Header() {
 function Hero() {
   return (
     <section className="hero">
+      {/* Atmospheric Background */}
       <div className="hero-bg">
-        <div className="hero-glow"></div>
+        {/* Floating orbs for depth */}
+        <div className="hero-orb hero-orb-1"></div>
+        <div className="hero-orb hero-orb-2"></div>
+        <div className="hero-orb hero-orb-3"></div>
+        {/* Grid pattern */}
         <div className="hero-grid"></div>
       </div>
 
@@ -94,7 +100,7 @@ function Hero() {
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">
               Start Your Project
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
@@ -119,6 +125,109 @@ function Hero() {
             <div className="stat-item">
               <div className="stat-number">100%</div>
               <div className="stat-label">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Products Section
+function Products() {
+  return (
+    <section id="products" className="products-section section">
+      <div className="container">
+        <div className="section-header">
+          <span className="section-badge">Our Products</span>
+          <h2 className="section-title">
+            Apps We've <span className="text-gradient">Built & Launched</span>
+          </h2>
+          <p className="section-description">
+            Experience our passion for creating engaging digital experiences
+          </p>
+        </div>
+
+        {/* Featured Product - Color Flood Game */}
+        <div className="product-showcase">
+          <div className="product-card-featured">
+            {/* Game Visual Side */}
+            <div className="product-visual">
+              <div className="product-device">
+                <div className="product-screen">
+                  {/* Colorful grid representation */}
+                  <div className="game-preview">
+                    {[...Array(36)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="game-cell"
+                        style={{
+                          background: ['#f59e0b', '#a855f7', '#06b6d4', '#ec4899', '#84cc16', '#3b82f6'][i % 6],
+                          animationDelay: `${i * 0.05}s`
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              {/* Floating badges */}
+              <div className="product-badge product-badge-1">🎮 Puzzle</div>
+              <div className="product-badge product-badge-2">🧠 Strategy</div>
+            </div>
+
+            {/* Game Info Side */}
+            <div className="product-info">
+              <div className="product-platform">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.523 2.469c-.627-.313-1.393-.157-1.879.374L12 7.111l-3.644-4.268c-.486-.531-1.252-.687-1.879-.374-.627.313-1.017.97-.956 1.652l.583 6.51-5.086 5.086c-.364.364-.555.857-.522 1.362.033.505.288.971.7 1.279l6.086 4.552c.337.252.75.39 1.175.39.229 0 .459-.04.677-.122l9.586-3.592c.605-.227 1.018-.783 1.063-1.426.045-.643-.289-1.253-.86-1.568L12.5 11.8l3.644-4.268c.486-.531.594-1.297.267-1.879-.327-.582-.888-.939-1.518-.939-.203 0-.406.039-.599.119l-.291.122 3.644 4.268c.486.531.594 1.297.267 1.879a1.51 1.51 0 0 1-1.518.939c-.203 0-.406-.039-.599-.119L12 8.889l-3.644 4.268c-.486.531-1.252.687-1.879.374-.627-.313-1.017-.97-.956-1.652l.583-6.51 5.086-5.086c.364-.364.555-.857.522-1.362a1.51 1.51 0 0 0-.7-1.279L5.018 3.194c-.337-.252-.75-.39-1.175-.39-.229 0-.459.04-.677.122L3.475 2.8c.486-.531 1.252-.687 1.879-.374z" />
+                </svg>
+                Available on Google Play
+              </div>
+
+              <h3 className="product-title">Color Flood: 25-Move Puzzle</h3>
+
+              <p className="product-description">
+                Flood the board in 25 moves—a relaxing, brainy color strategy puzzle that challenges
+                your mind while keeping you entertained. Simple to learn, satisfying to master!
+              </p>
+
+              <ul className="product-features">
+                <li>
+                  <span className="feature-icon">🎨</span>
+                  <span>Vibrant colorful gameplay</span>
+                </li>
+                <li>
+                  <span className="feature-icon">🧩</span>
+                  <span>Strategic puzzle solving</span>
+                </li>
+                <li>
+                  <span className="feature-icon">✨</span>
+                  <span>Clean, minimal design</span>
+                </li>
+                <li>
+                  <span className="feature-icon">🏆</span>
+                  <span>Challenge yourself in 25 moves</span>
+                </li>
+              </ul>
+
+              <div className="product-actions">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.secretspidey.colorfloodclassicpuzzle"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                  </svg>
+                  Get it on Play Store
+                </a>
+                <div className="product-meta">
+                  <span>Free to play</span>
+                  <span>•</span>
+                  <span>By Akshar Production</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -202,42 +311,66 @@ function Services() {
   );
 }
 
-// Portfolio Data
-const portfolioItems = [
+// Portfolio Data - Web Development Projects
+const webProjects = [
   {
-    title: "E-commerce Platform",
+    title: "MS Realtors",
     category: "Web Development",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
-  },
-  {
-    title: "Brand Identity Design",
-    category: "Graphic Design",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
-  },
-  {
-    title: "Social Media Campaign",
-    category: "Marketing",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80"
-  },
-  {
-    title: "SaaS Dashboard",
-    category: "Web Application",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
-  },
-  {
-    title: "Product Video",
-    category: "Video Production",
-    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80"
-  },
-  {
-    title: "PPC Campaign",
-    category: "Paid Advertising",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80"
+    description: "Complete real estate platform with property listings, search, and inquiry system",
+    image: "/portfolio/msrealtors.png",
+    link: "https://msrealtor.in/",
+    featured: true
   }
 ];
 
-// Portfolio Section
+// Social Media Portfolio Data with real screenshots
+const socialMediaProjects = [
+  {
+    title: "KR Ayurveda",
+    description: "Ayurvedic Healthcare Brand",
+    screenshot: "/portfolio/krayurveda.png",
+    link: "https://www.instagram.com/krayurveda/",
+    followers: "Growing",
+    industry: "Healthcare"
+  },
+  {
+    title: "Mr Basrai's World Cuisines",
+    description: "Multi-cuisine Restaurant Chain",
+    screenshot: "/portfolio/mrbasrai-cuisines.png",
+    link: "https://www.instagram.com/mrbasraiworldcuisines/",
+    followers: "Active",
+    industry: "Food & Dining"
+  },
+  {
+    title: "Mr Basrai's Edinburgh",
+    description: "Fine Dining Restaurant",
+    screenshot: "/portfolio/mrbasrai-edinburgh.png",
+    link: "https://www.instagram.com/mrbasraiedinburgh/",
+    followers: "Engaged",
+    industry: "Hospitality"
+  },
+  {
+    title: "Lamenda Fashions",
+    description: "Women's Fashion E-commerce",
+    screenshot: "/portfolio/lamenda.png",
+    link: "https://www.instagram.com/lamenda.in/",
+    followers: "10K+",
+    industry: "Fashion"
+  },
+  {
+    title: "Suresh Kumar Mali",
+    description: "Personal Branding & Lifestyle",
+    screenshot: "/portfolio/suresh-mali.png",
+    link: "https://www.instagram.com/sureshkumarmali85/",
+    followers: "Growing",
+    industry: "Personal Brand"
+  }
+];
+
+// Portfolio Section with Interactive Showcase
 function Portfolio() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <section id="portfolio" className="portfolio-section section">
       <div className="container">
@@ -247,24 +380,122 @@ function Portfolio() {
             Projects That <span className="text-gradient">Speak Results</span>
           </h2>
           <p className="section-description">
-            Explore our portfolio of successful projects across various industries
+            Real results from real clients - explore our portfolio of successful digital transformations
           </p>
         </div>
 
-        <div className="portfolio-grid">
-          {portfolioItems.map((item, index) => (
-            <div key={index} className="portfolio-card">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="portfolio-image"
-              />
-              <div className="portfolio-overlay">
-                <span className="portfolio-category">{item.category}</span>
-                <h3 className="portfolio-title">{item.title}</h3>
+        {/* Featured Web Project */}
+        <div className="portfolio-featured-section">
+          <h3 className="portfolio-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+              <line x1="3" y1="9" x2="21" y2="9" />
+              <line x1="9" y1="21" x2="9" y2="9" />
+            </svg>
+            Web Development
+          </h3>
+          {webProjects.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-featured-card"
+            >
+              <div className="portfolio-featured-image-wrap">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="portfolio-featured-image"
+                />
+                <div className="portfolio-browser-frame">
+                  <div className="browser-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div className="browser-url">{item.link}</div>
+                </div>
               </div>
-            </div>
+              <div className="portfolio-featured-content">
+                <span className="portfolio-live-badge">
+                  <span className="live-dot"></span>
+                  Live Project
+                </span>
+                <h4 className="portfolio-featured-title">{item.title}</h4>
+                <p className="portfolio-featured-desc">{item.description}</p>
+                <span className="portfolio-visit-btn">
+                  Visit Website
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12,5 19,12 12,19" />
+                  </svg>
+                </span>
+              </div>
+            </a>
           ))}
+        </div>
+
+        {/* Social Media Showcase */}
+        <div className="social-media-showcase">
+          <h3 className="portfolio-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+            Social Media Marketing
+          </h3>
+
+          <div className="social-showcase-wrapper">
+            {/* Phone Mockup Display */}
+            <div className="phone-mockup-container">
+              <div className="phone-mockup">
+                <div className="phone-notch"></div>
+                <div className="phone-screen">
+                  <img
+                    src={socialMediaProjects[activeIndex].screenshot}
+                    alt={socialMediaProjects[activeIndex].title}
+                    className="phone-screen-image"
+                  />
+                </div>
+                <div className="phone-home-indicator"></div>
+              </div>
+              <div className="phone-glow"></div>
+            </div>
+
+            {/* Client Selector */}
+            <div className="social-clients-list">
+              <div className="clients-header">
+                <span className="clients-count">{socialMediaProjects.length} Active Clients</span>
+              </div>
+              {socialMediaProjects.map((client, index) => (
+                <div
+                  key={index}
+                  className={`client-card ${activeIndex === index ? 'active' : ''}`}
+                  onClick={() => setActiveIndex(index)}
+                  onMouseEnter={() => setActiveIndex(index)}
+                >
+                  <div className="client-info">
+                    <h4 className="client-name">{client.title}</h4>
+                    <p className="client-desc">{client.description}</p>
+                    <span className="client-industry">{client.industry}</span>
+                  </div>
+                  <a
+                    href={client.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="client-instagram-link"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -496,35 +727,22 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <a href="/" className="logo">
-              <div className="logo-icon">A</div>
-              <span>Akshar</span>
+              <img src="/logo.png" alt="Akshar Production" className="logo-img" />
             </a>
             <p>
               Your trusted partner for digital transformation. We create exceptional digital experiences that drive growth.
             </p>
             <div className="footer-social">
-              <a href="#" className="social-link" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61572490632035" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
               </a>
-              <a href="#" className="social-link" aria-label="Instagram">
+              <a href="https://www.instagram.com/aksharproduction/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-              </a>
-              <a href="#" className="social-link" aria-label="Twitter">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
-                </svg>
-              </a>
-              <a href="#" className="social-link" aria-label="LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect x="2" y="9" width="4" height="12" />
-                  <circle cx="4" cy="4" r="2" />
                 </svg>
               </a>
             </div>
@@ -580,6 +798,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Products />
         <Services />
         <Portfolio />
         <Process />

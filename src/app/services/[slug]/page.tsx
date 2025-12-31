@@ -199,10 +199,11 @@ export default function ServicePage() {
                 <div className="container">
                     <div className="header-inner">
                         <Link href="/" className="logo">
-                            <div className="logo-icon">A</div>
+                            <div className="logo-icon" style={{ color: '#0a0a0b' }}>A</div>
                             <span>Akshar</span>
                         </Link>
                         <nav className="nav">
+                            <Link href="/#products" className="nav-link">Products</Link>
                             <Link href="/#services" className="nav-link">Services</Link>
                             <Link href="/#portfolio" className="nav-link">Portfolio</Link>
                             <Link href="/#process" className="nav-link">Process</Link>
@@ -379,7 +380,7 @@ export default function ServicePage() {
                     <div className="footer-grid">
                         <div className="footer-brand">
                             <Link href="/" className="logo">
-                                <div className="logo-icon">A</div>
+                                <div className="logo-icon" style={{ color: '#0a0a0b' }}>A</div>
                                 <span>Akshar</span>
                             </Link>
                             <p>
