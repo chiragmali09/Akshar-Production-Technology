@@ -20,7 +20,7 @@ function Header() {
       <div className="container">
         <div className="header-inner">
           <a href="/" className="logo">
-            <img src="/logo.png" alt="Akshar Production" className="logo-img" />
+            <span className="logo-text">Akshar Production & Technology</span>
           </a>
 
           <nav className="nav">
@@ -155,19 +155,12 @@ function Products() {
             <div className="product-visual">
               <div className="product-device">
                 <div className="product-screen">
-                  {/* Colorful grid representation */}
-                  <div className="game-preview">
-                    {[...Array(36)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="game-cell"
-                        style={{
-                          background: ['#f59e0b', '#a855f7', '#06b6d4', '#ec4899', '#84cc16', '#3b82f6'][i % 6],
-                          animationDelay: `${i * 0.05}s`
-                        }}
-                      />
-                    ))}
-                  </div>
+                  {/* Color Flood Hero Image */}
+                  <img
+                    src="/colorflood-hero.png"
+                    alt="Color Flood Game"
+                    className="game-hero-image"
+                  />
                 </div>
               </div>
               {/* Floating badges */}
@@ -713,7 +706,7 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <a href="/" className="logo">
-              <img src="/logo.png" alt="Akshar Production" className="logo-img" />
+              <span className="logo-text">Akshar Production & Technology</span>
             </a>
             <p>
               Your trusted partner for digital transformation. We create exceptional digital experiences that drive growth.
