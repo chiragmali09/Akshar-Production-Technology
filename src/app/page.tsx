@@ -333,22 +333,8 @@ const socialMediaProjects = [
     followers: "Growing",
     industry: "Healthcare"
   },
-  {
-    title: "Mr Basrai's World Cuisines",
-    description: "Multi-cuisine Restaurant Chain",
-    screenshot: "/portfolio/mrbasrai-cuisines.png",
-    link: "https://www.instagram.com/mrbasraiworldcuisines/",
-    followers: "Active",
-    industry: "Food & Dining"
-  },
-  {
-    title: "Mr Basrai's Edinburgh",
-    description: "Fine Dining Restaurant",
-    screenshot: "/portfolio/mrbasrai-edinburgh.png",
-    link: "https://www.instagram.com/mrbasraiedinburgh/",
-    followers: "Engaged",
-    industry: "Hospitality"
-  },
+
+
   {
     title: "Lamenda Fashions",
     description: "Women's Fashion E-commerce",
