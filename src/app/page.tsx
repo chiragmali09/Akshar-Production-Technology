@@ -346,6 +346,26 @@ const socialMediaProjects = [
   }
 ];
 
+// Video Editing Portfolio Data
+const videoProjects = [
+  {
+    title: "BAPS Sirohi - 7th Patotsav Experience",
+    description: "Reel featuring experiences shared by Minister of State & MLA Shri Otaram Ji Dewasi at BAPS Swaminarayan Mandir, Sirohi.",
+    link: "https://www.instagram.com/p/DYXdVVDp4SE/",
+    embedUrl: "https://www.instagram.com/p/DYXdVVDp4SE/embed",
+    tags: ["Reel", "Event Coverage", "MLA Interview", "Community"],
+    industry: "Community & Politics"
+  },
+  {
+    title: "BAPS Sirohi - MP Lumbaram Ji Choudhary Interview",
+    description: "Reel highlighting the experience shared by Member of Parliament (MP) Shri Lumbaram Ji Choudhary at BAPS Sirohi.",
+    link: "https://www.instagram.com/p/DYPHjXEJvzR/",
+    embedUrl: "https://www.instagram.com/p/DYPHjXEJvzR/embed",
+    tags: ["Reel", "Political Interview", "Event Promo", "Social Media"],
+    industry: "Community & Politics"
+  }
+];
+
 // Portfolio Section with Interactive Showcase
 function Portfolio() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -474,6 +494,70 @@ function Portfolio() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Video Editing Showcase */}
+        <div className="video-showcase">
+          <h3 className="portfolio-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="23 7 16 12 23 17 23 7" />
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+            </svg>
+            Video Editing
+          </h3>
+
+          <div className="video-grid">
+            {videoProjects.map((project, index) => (
+              <div key={index} className="video-card">
+                <div className="video-phone-mockup">
+                  <div className="video-phone-notch"></div>
+                  <div className="video-phone-screen">
+                    <iframe
+                      src={project.embedUrl}
+                      className="instagram-media instagram-media-rendered"
+                      allowFullScreen={true}
+                      frameBorder="0"
+                      scrolling="no"
+                      style={{
+                        background: 'transparent',
+                        border: 'none',
+                        overflow: 'hidden',
+                        height: '100%',
+                        width: '100%',
+                        display: 'block'
+                      }}
+                    ></iframe>
+                  </div>
+                  <div className="video-phone-indicator"></div>
+                </div>
+
+                <div className="video-card-content">
+                  <h4 className="video-card-title">{project.title}</h4>
+                  <p className="video-card-desc">{project.description}</p>
+                  
+                  <div className="video-card-tags">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="video-tag">{tag}</span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="video-link-btn"
+                  >
+                    Watch on Instagram
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

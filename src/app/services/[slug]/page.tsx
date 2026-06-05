@@ -176,6 +176,26 @@ const servicesData: Record<string, {
     }
 };
 
+// Video Editing Portfolio Data
+const videoEditingProjects = [
+  {
+    title: "BAPS Sirohi - 7th Patotsav Experience",
+    description: "Reel featuring experiences shared by Minister of State & MLA Shri Otaram Ji Dewasi at BAPS Swaminarayan Mandir, Sirohi.",
+    link: "https://www.instagram.com/p/DYXdVVDp4SE/",
+    embedUrl: "https://www.instagram.com/p/DYXdVVDp4SE/embed",
+    tags: ["Reel", "Event Coverage", "MLA Interview", "Community"],
+    industry: "Community & Politics"
+  },
+  {
+    title: "BAPS Sirohi - MP Lumbaram Ji Choudhary Interview",
+    description: "Reel highlighting the experience shared by Member of Parliament (MP) Shri Lumbaram Ji Choudhary at BAPS Sirohi.",
+    link: "https://www.instagram.com/p/DYPHjXEJvzR/",
+    embedUrl: "https://www.instagram.com/p/DYPHjXEJvzR/embed",
+    tags: ["Reel", "Political Interview", "Event Promo", "Social Media"],
+    industry: "Community & Politics"
+  }
+];
+
 export default function ServicePage() {
     const params = useParams();
     const slug = params.slug as string;
@@ -352,6 +372,74 @@ export default function ServicePage() {
                         </div>
                     </div>
                 </section>
+
+                {/* Video Editing Portfolio Section */}
+                {slug === "video-editing" && (
+                    <section className="section" id="portfolio" style={{ background: "var(--background)" }}>
+                        <div className="container">
+                            <div className="section-header">
+                                <span className="section-badge">Our Work</span>
+                                <h2 className="section-title">Video Editing Portfolio</h2>
+                                <p className="section-description">
+                                    Check out some of our recent professional video editing projects
+                                </p>
+                            </div>
+
+                            <div className="video-grid">
+                                {videoEditingProjects.map((project, index) => (
+                                    <div key={index} className="video-card">
+                                        <div className="video-phone-mockup">
+                                            <div className="video-phone-notch"></div>
+                                            <div className="video-phone-screen">
+                                                <iframe
+                                                    src={project.embedUrl}
+                                                    className="instagram-media instagram-media-rendered"
+                                                    allowFullScreen={true}
+                                                    frameBorder="0"
+                                                    scrolling="no"
+                                                    style={{
+                                                        background: 'transparent',
+                                                        border: 'none',
+                                                        overflow: 'hidden',
+                                                        height: '100%',
+                                                        width: '100%',
+                                                        display: 'block'
+                                                    }}
+                                                ></iframe>
+                                            </div>
+                                            <div className="video-phone-indicator"></div>
+                                        </div>
+
+                                        <div className="video-card-content" style={{ textAlign: "left" }}>
+                                            <h4 className="video-card-title">{project.title}</h4>
+                                            <p className="video-card-desc">{project.description}</p>
+                                            
+                                            <div className="video-card-tags">
+                                                {project.tags.map((tag, tagIndex) => (
+                                                    <span key={tagIndex} className="video-tag">{tag}</span>
+                                                ))}
+                                            </div>
+
+                                            <a
+                                                href={project.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="video-link-btn"
+                                            >
+                                                Watch on Instagram
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                )}
 
                 {/* CTA Section */}
                 <section className="cta-section section">

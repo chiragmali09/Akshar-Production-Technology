@@ -1630,6 +1630,144 @@ p {
   transform: scale(1.1);
 }
 
+/* Video Editing Showcase */
+.video-showcase {
+  margin-top: var(--space-10);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-10);
+  }
+}
+
+.video-card {
+  background: var(--graphite);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  transition: all var(--duration-slow) var(--ease-out-expo);
+  box-shadow: var(--shadow-md);
+  align-items: center;
+}
+
+.video-card:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.1), var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.video-card-content {
+  width: 100%;
+}
+
+.video-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: var(--space-2);
+}
+
+.video-card-desc {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.video-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--space-4);
+}
+
+.video-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.video-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--amber);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: gap var(--duration-base) ease;
+}
+
+.video-link-btn:hover {
+  gap: 12px;
+}
+
+/* Phone frame custom styled for Video Embeds */
+.video-phone-mockup {
+  position: relative;
+  width: 280px;
+  height: 498px; /* Optimized aspect ratio to accommodate reels embed player */
+  background: #1a1a1d;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow:
+    0 0 0 2px #3a3a3d,
+    inset 0 0 0 2px #2a2a2d,
+    0 30px 60px -15px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.video-phone-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 20px;
+  background: #1a1a1d;
+  border-radius: 16px;
+  z-index: 10;
+}
+
+.video-phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-phone-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  z-index: 10;
+}
+
 /* =========================================
    PROCESS SECTION
    ========================================= */
