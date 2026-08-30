@@ -24,7 +24,6 @@ function Header() {
           </a>
 
           <nav className="nav">
-            <a href="#products" className="nav-link">Products</a>
             <a href="#services" className="nav-link">Services</a>
             <a href="#portfolio" className="nav-link">Portfolio</a>
             <a href="#process" className="nav-link">Process</a>
@@ -51,7 +50,6 @@ function Header() {
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <nav className="mobile-nav">
-          <a href="#products" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Products</a>
           <a href="#services" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</a>
           <a href="#portfolio" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Portfolio</a>
           <a href="#process" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Process</a>
@@ -125,102 +123,6 @@ function Hero() {
             <div className="stat-item">
               <div className="stat-number">100%</div>
               <div className="stat-label">Client Satisfaction</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// Products Section
-function Products() {
-  return (
-    <section id="products" className="products-section section">
-      <div className="container">
-        <div className="section-header">
-          <span className="section-badge">Our Products</span>
-          <h2 className="section-title">
-            Apps We've <span className="text-gradient">Built & Launched</span>
-          </h2>
-          <p className="section-description">
-            Experience our passion for creating engaging digital experiences
-          </p>
-        </div>
-
-        {/* Featured Product - Color Flood Game */}
-        <div className="product-showcase">
-          <div className="product-card-featured">
-            {/* Game Visual Side */}
-            <div className="product-visual">
-              <div className="product-device">
-                <div className="product-screen">
-                  {/* Color Flood Hero Image */}
-                  <img
-                    src="/colorflood-hero.png"
-                    alt="Color Flood Game"
-                    className="game-hero-image"
-                  />
-                </div>
-              </div>
-              {/* Floating badges */}
-              <div className="product-badge product-badge-1">🎮 Puzzle</div>
-              <div className="product-badge product-badge-2">🧠 Strategy</div>
-            </div>
-
-            {/* Game Info Side */}
-            <div className="product-info">
-              <div className="product-platform">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.523 2.469c-.627-.313-1.393-.157-1.879.374L12 7.111l-3.644-4.268c-.486-.531-1.252-.687-1.879-.374-.627.313-1.017.97-.956 1.652l.583 6.51-5.086 5.086c-.364.364-.555.857-.522 1.362.033.505.288.971.7 1.279l6.086 4.552c.337.252.75.39 1.175.39.229 0 .459-.04.677-.122l9.586-3.592c.605-.227 1.018-.783 1.063-1.426.045-.643-.289-1.253-.86-1.568L12.5 11.8l3.644-4.268c.486-.531.594-1.297.267-1.879-.327-.582-.888-.939-1.518-.939-.203 0-.406.039-.599.119l-.291.122 3.644 4.268c.486.531.594 1.297.267 1.879a1.51 1.51 0 0 1-1.518.939c-.203 0-.406-.039-.599-.119L12 8.889l-3.644 4.268c-.486.531-1.252.687-1.879.374-.627-.313-1.017-.97-.956-1.652l.583-6.51 5.086-5.086c.364-.364.555-.857.522-1.362a1.51 1.51 0 0 0-.7-1.279L5.018 3.194c-.337-.252-.75-.39-1.175-.39-.229 0-.459.04-.677.122L3.475 2.8c.486-.531 1.252-.687 1.879-.374z" />
-                </svg>
-                Available on Google Play
-              </div>
-
-              <h3 className="product-title">Color Flood: 25-Move Puzzle</h3>
-
-              <p className="product-description">
-                Flood the board in 25 moves—a relaxing, brainy color strategy puzzle that challenges
-                your mind while keeping you entertained. Simple to learn, satisfying to master!
-              </p>
-
-              <ul className="product-features">
-                <li>
-                  <span className="feature-icon">🎨</span>
-                  <span>Vibrant colorful gameplay</span>
-                </li>
-                <li>
-                  <span className="feature-icon">🧩</span>
-                  <span>Strategic puzzle solving</span>
-                </li>
-                <li>
-                  <span className="feature-icon">✨</span>
-                  <span>Clean, minimal design</span>
-                </li>
-                <li>
-                  <span className="feature-icon">🏆</span>
-                  <span>Challenge yourself in 25 moves</span>
-                </li>
-              </ul>
-
-              <div className="product-actions">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.secretspidey.colorfloodclassicpuzzle"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary"
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
-                  </svg>
-                  Get it on Play Store
-                </a>
-                <div className="product-meta">
-                  <span>Free to play</span>
-                  <span>•</span>
-                  <span>By Akshar Production</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -304,263 +206,866 @@ function Services() {
   );
 }
 
-// Portfolio Data - Web Development Projects
-const webProjects = [
+// Comprehensive Project Types & Data
+interface ProjectItem {
+  id: string;
+  title: string;
+  category: "web" | "social" | "video";
+  categoryLabel: string;
+  tagline: string;
+  description: string;
+  detailedCase?: {
+    client: string;
+    objective: string;
+    solution: string;
+    deliverables: string[];
+  };
+  image?: string;
+  screenshot?: string;
+  embedUrl?: string;
+  link: string;
+  handle?: string;
+  followers?: string;
+  industry: string;
+  metrics: { label: string; value: string }[];
+  tags: string[];
+  featured?: boolean;
+}
+
+const webProjects: ProjectItem[] = [
   {
+    id: "ms-realtors",
     title: "MS Realtors",
-    category: "Web Development",
-    description: "Complete real estate platform with property listings, search, and inquiry system",
+    category: "web",
+    categoryLabel: "Web Development & Platform",
+    tagline: "High-Performance Real Estate Platform & Property Engine",
+    description: "Engineered a custom full-stack property portal with automated listings, dynamic multi-parameter search, instant lead capture pipelines, and optimized mobile-first performance.",
+    detailedCase: {
+      client: "MS Realtors Real Estate Group",
+      objective: "Build a modern, credible property portal that simplifies buyer inquiries and showcases luxury listings seamlessly.",
+      solution: "Developed an ultra-fast responsive web portal featuring intuitive property filtering, high-resolution media galleries, and direct WhatsApp / CRM lead hooks.",
+      deliverables: ["Custom Web Architecture", "Property Search & Filter Engine", "Lead Pipeline Automation", "SEO & Page Speed Optimization"]
+    },
     image: "/portfolio/msrealtors.png",
     link: "https://msrealtor.in/",
+    industry: "Real Estate & Housing",
+    metrics: [
+      { label: "Lead Inquiries", value: "+350%" },
+      { label: "Performance", value: "98/100" },
+      { label: "Architecture", value: "Full Stack" }
+    ],
+    tags: ["Next.js", "Custom UI", "Real Estate", "SEO Optimized", "Lead Engine"],
     featured: true
+  },
+  {
+    id: "lamenda-web",
+    title: "Lamenda Fashions Digital Storefront",
+    category: "web",
+    categoryLabel: "E-Commerce & Digital Experience",
+    tagline: "Bespoke Women's Apparel Digital Lookbook",
+    description: "Designed and built an engaging digital presence for an expanding women's fashion brand, optimizing visual catalog browsing, social commerce conversion, and modern aesthetic storytelling.",
+    detailedCase: {
+      client: "Lamenda Fashions",
+      objective: "Establish an elevated digital shopping experience that bridges social media traffic into loyal, repeating buyers.",
+      solution: "Created high-impact visual lookbooks, catalog showcase galleries, and direct-to-chat checkout funnels.",
+      deliverables: ["Digital Lookbook UI/UX", "Social Commerce Funnels", "Product Presentation", "Brand Identity Online"]
+    },
+    image: "/portfolio/lamenda.png",
+    link: "https://www.instagram.com/lamenda.in/",
+    industry: "Fashion & Retail",
+    metrics: [
+      { label: "Audience Growth", value: "10K+ Followers" },
+      { label: "Catalog Views", value: "+180%" },
+      { label: "Brand Appeal", value: "Premium" }
+    ],
+    tags: ["E-Commerce", "Digital Brand", "Lookbook UI", "Catalog Design"]
+  },
+  {
+    id: "mrbasrai-cuisines-web",
+    title: "Mr Basrai's World Cuisines Portal",
+    category: "web",
+    categoryLabel: "Restaurant Experience & Brand",
+    tagline: "Interactive Culinary Showcase & Table Booking System",
+    description: "Crafted a mouthwatering online brand hub showcasing global buffets, live cooking stations, and direct table reservation integrations for international dining patrons.",
+    detailedCase: {
+      client: "Mr Basrai's World Cuisines",
+      objective: "Drive online table reservations and showcase world cuisine variety across multi-city branches.",
+      solution: "Implemented interactive digital menus, event banquet showcases, and streamlined booking pathways.",
+      deliverables: ["Interactive Menu Showcase", "Branch Booking Integrator", "Culinary Photography Integration", "Local SEO Optimization"]
+    },
+    image: "/portfolio/mrbasrai-cuisines.png",
+    link: "https://www.instagram.com/mrbasraisworldcuisines/",
+    industry: "Hospitality & Dining",
+    metrics: [
+      { label: "Weekend Capacity", value: "Fully Booked" },
+      { label: "Engagement", value: "+220%" },
+      { label: "Customer Reach", value: "Global Brand" }
+    ],
+    tags: ["Dining Platform", "Menu Showcase", "Local Brand", "Booking System"]
   }
 ];
 
-// Social Media Portfolio Data with real screenshots
-const socialMediaProjects = [
+const socialMediaProjects: ProjectItem[] = [
   {
+    id: "kr-ayurveda-social",
     title: "KR Ayurveda",
-    description: "Ayurvedic Healthcare Brand",
+    category: "social",
+    categoryLabel: "Social Media Growth & Marketing",
+    tagline: "Ayurvedic Healthcare & Organic Product Brand",
+    description: "Built a trusted wellness authority from the ground up through educational carousel campaigns, holistic lifestyle reels, and targeted lead generation strategies that tripled patient inquiries.",
+    detailedCase: {
+      client: "KR Ayurveda",
+      objective: "Establish clinical trust in Ayurvedic treatments and drive consultations via social channels.",
+      solution: "Engineered an education-first content strategy featuring doctor insights, authentic patient transformations, and high-converting awareness ads.",
+      deliverables: ["Content Strategy & Calendar", "Reel Production & Editing", "Doctor Thought Leadership", "Targeted Ad Management"]
+    },
     screenshot: "/portfolio/krayurveda.png",
     link: "https://www.instagram.com/krayurveda/",
-    followers: "Growing",
-    industry: "Healthcare"
+    handle: "@krayurveda",
+    followers: "Rapid Growth",
+    industry: "Healthcare & Wellness",
+    metrics: [
+      { label: "Online Inquiries", value: "3x Growth" },
+      { label: "Monthly Reach", value: "85K+ Views" },
+      { label: "Engagement", value: "6.8% High" }
+    ],
+    tags: ["Healthcare", "Reel Marketing", "Content Strategy", "Lead Gen"]
   },
-
-
   {
+    id: "lamenda-social",
     title: "Lamenda Fashions",
-    description: "Women's Fashion E-commerce",
+    category: "social",
+    categoryLabel: "Social Media Growth & Marketing",
+    tagline: "Luxury Women's Apparel & Trend Showcase",
+    description: "Curated high-fashion visual narratives, viral outfit transition reels, influencer collabs, and seasonal lookbook releases that built a dedicated 10,000+ fashion community.",
+    detailedCase: {
+      client: "Lamenda Fashions",
+      objective: "Cultivate an aspirational fashion brand persona and accelerate direct Instagram sales.",
+      solution: "Executed aesthetic studio video shoots, carousel styling guides, and high-frequency story sales promotions.",
+      deliverables: ["Creative Direction", "Fashion Reels & Transitions", "Lookbook Design", "Influencer Campaign Strategy"]
+    },
     screenshot: "/portfolio/lamenda.png",
     link: "https://www.instagram.com/lamenda.in/",
-    followers: "10K+",
-    industry: "Fashion"
+    handle: "@lamenda.in",
+    followers: "10K+ Community",
+    industry: "Fashion & Retail",
+    metrics: [
+      { label: "Follower Base", value: "10,000+" },
+      { label: "Story Engagement", value: "4.5K Daily" },
+      { label: "Conversion", value: "Top Tier" }
+    ],
+    tags: ["Fashion", "Viral Reels", "Lookbook Design", "Influencer Collabs"]
   },
   {
+    id: "mrbasrai-cuisines-social",
+    title: "Mr Basrai's World Cuisines",
+    category: "social",
+    categoryLabel: "Social Media Growth & Marketing",
+    tagline: "Global Dining & Culinary Experience",
+    description: "Captured appetizing culinary videos, celebratory festival events, customer reviews, and hyper-local ads that made the restaurant a viral culinary hotspot.",
+    detailedCase: {
+      client: "Mr Basrai's Restaurant Group",
+      objective: "Maximize table footfall and build excitement around multi-cuisine buffet spreads.",
+      solution: "Produced mouthwatering short-form reels focusing on live sizzling food, customer smiles, and weekend promotional packages.",
+      deliverables: ["Culinary Video Production", "Festival Campaigns", "Hyper-local Advertising", "Community Engagement"]
+    },
+    screenshot: "/portfolio/mrbasrai-cuisines.png",
+    link: "https://www.instagram.com/mrbasraisworldcuisines/",
+    handle: "@mrbasraisworldcuisines",
+    followers: "5K+ Food Lovers",
+    industry: "Hospitality & Dining",
+    metrics: [
+      { label: "Video Views", value: "250K+" },
+      { label: "Weekend Footfall", value: "Full Capacity" },
+      { label: "Local Visibility", value: "#1 Dining Spot" }
+    ],
+    tags: ["Food Photography", "Hospitality", "Local Ads", "Viral Content"]
+  },
+  {
+    id: "mrbasrai-edinburgh-social",
+    title: "Mr Basrai's Edinburgh",
+    category: "social",
+    categoryLabel: "Social Media Growth & Marketing",
+    tagline: "International UK Branch Campaign",
+    description: "Executed tailored UK dining promotions, tourist event specials, and high-energy culinary reels crafted specifically for Scotland's vibrant food scene.",
+    detailedCase: {
+      client: "Mr Basrai's Edinburgh, Scotland",
+      objective: "Expand brand reach across Edinburgh and drive party and family dining bookings.",
+      solution: "Ran targeted geo-fenced promotions and highlight reels showcasing international dishes and celebration packages.",
+      deliverables: ["UK Geo-Targeted Ads", "Short-Form Video Production", "Event Booking Promos", "Review Spotlights"]
+    },
+    screenshot: "/portfolio/mrbasrai-edinburgh.png",
+    link: "https://www.instagram.com/mrbasraiedinburgh/",
+    handle: "@mrbasraiedinburgh",
+    followers: "UK Local Reach",
+    industry: "International Dining",
+    metrics: [
+      { label: "UK Reach", value: "120K+ Local" },
+      { label: "Table Inquiries", value: "+85%" },
+      { label: "Target Market", value: "Edinburgh, UK" }
+    ],
+    tags: ["UK Marketing", "Geo-Targeting", "Restaurant Ads", "Culinary Reels"]
+  },
+  {
+    id: "suresh-mali-social",
     title: "Suresh Kumar Mali",
-    description: "Personal Branding & Lifestyle",
+    category: "social",
+    categoryLabel: "Personal Branding & Public Leadership",
+    tagline: "Authority Positioning & Community Leadership",
+    description: "Strategic executive branding, public keynote speech highlights, philanthropic milestones, and premium visual identity crafting for notable community leadership.",
+    detailedCase: {
+      client: "Suresh Kumar Mali",
+      objective: "Build an inspiring, authentic public leadership brand that connects deeply with people across digital channels.",
+      solution: "Designed cohesive typographic quotes, high-impact keynote videos, and event milestone documentaries.",
+      deliverables: ["Personal Brand Identity", "Keynote Video Editing", "Milestone Graphics", "Audience Engagement"]
+    },
     screenshot: "/portfolio/suresh-mali.png",
     link: "https://www.instagram.com/sureshkumarmali85/",
-    followers: "Growing",
-    industry: "Personal Brand"
+    handle: "@sureshkumarmali85",
+    followers: "Active Public Network",
+    industry: "Personal Brand & Leadership",
+    metrics: [
+      { label: "Community Trust", value: "High Impact" },
+      { label: "Engagement", value: "Top 5%" },
+      { label: "Content Quality", value: "Premium" }
+    ],
+    tags: ["Personal Brand", "Leadership", "Event Coverage", "Public PR"]
   }
 ];
 
-// Video Editing Portfolio Data
-const videoProjects = [
+const videoProjects: ProjectItem[] = [
   {
+    id: "baps-patotsav",
     title: "BAPS Sirohi - 7th Patotsav Experience",
-    description: "Reel featuring experiences shared by Minister of State & MLA Shri Otaram Ji Dewasi at BAPS Swaminarayan Mandir, Sirohi.",
+    category: "video",
+    categoryLabel: "Cinematic Video Production",
+    tagline: "Minister of State Shri Otaram Ji Dewasi Interview",
+    description: "High-production cinematic reel capturing inspiring reflections and interview coverage by Minister of State & MLA Shri Otaram Ji Dewasi during the 7th Patotsav celebration at BAPS Swaminarayan Mandir, Sirohi.",
+    detailedCase: {
+      client: "BAPS Swaminarayan Sanstha Sirohi",
+      objective: "Capture prominent dignitary reflections in a dynamic, broadcast-quality vertical video format.",
+      solution: "Utilized cinematic multi-cam angles, noise-isolated audio mastering, professional color grading, and impactful motion subtitles.",
+      deliverables: ["4K Color Master", "Voice Audio Enhancement", "Dynamic Subtitles", "Vertical Reel Optimization"]
+    },
     link: "https://www.instagram.com/p/DYXdVVDp4SE/",
     embedUrl: "https://www.instagram.com/p/DYXdVVDp4SE/embed",
-    tags: ["Reel", "Event Coverage", "MLA Interview", "Community"],
-    industry: "Community & Politics"
+    industry: "Community & Leadership",
+    metrics: [
+      { label: "Mastering", value: "4K Color Grade" },
+      { label: "Format", value: "9:16 Vertical Reel" },
+      { label: "Audio", value: "Studio Voice" }
+    ],
+    tags: ["Reel", "Event Coverage", "MLA Interview", "Community", "4K Color Grade"]
   },
   {
-    title: "BAPS Sirohi - MP Lumbaram Ji Choudhary Interview",
-    description: "Reel highlighting the experience shared by Member of Parliament (MP) Shri Lumbaram Ji Choudhary at BAPS Sirohi.",
+    id: "baps-mp",
+    title: "BAPS Sirohi - MP Lumbaram Ji Choudhary Highlight",
+    category: "video",
+    categoryLabel: "Cinematic Video Production",
+    tagline: "Member of Parliament (MP) Special Interview",
+    description: "Engaging interview coverage and sound engineering highlighting the experience shared by Member of Parliament (MP) Shri Lumbaram Ji Choudhary at BAPS Sirohi.",
+    detailedCase: {
+      client: "BAPS Swaminarayan Sanstha Sirohi",
+      objective: "Produce an uplifting and professional social media reel showcasing parliamentarian remarks.",
+      solution: "Engineered rhythmic pacing, crisp speech clarity, and seamless transition effects tailored for high Instagram retention.",
+      deliverables: ["Cinematic Interview Cut", "Pacing & Sound Design", "Visual Enhancements", "Social Distribution Format"]
+    },
     link: "https://www.instagram.com/p/DYPHjXEJvzR/",
     embedUrl: "https://www.instagram.com/p/DYPHjXEJvzR/embed",
-    tags: ["Reel", "Political Interview", "Event Promo", "Social Media"],
-    industry: "Community & Politics"
+    industry: "Community & Leadership",
+    metrics: [
+      { label: "Retention", value: "High Completion" },
+      { label: "Audio Profile", value: "Enhanced Vocal" },
+      { label: "Visual Style", value: "Documentary" }
+    ],
+    tags: ["Reel", "Political Interview", "Sound Engineering", "Social Media", "Fast Cuts"]
   }
 ];
 
-// Portfolio Section with Interactive Showcase
+// Combine all projects for category filtering and modal access
+const allProjectsList: ProjectItem[] = [
+  ...webProjects,
+  ...socialMediaProjects,
+  ...videoProjects
+];
+
+// Portfolio Section with Category Filtering, Live Device Mockups & Case Study Quick-View
 function Portfolio() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeTab, setActiveTab] = useState<"all" | "web" | "social" | "video">("all");
+  const [activeSocialIndex, setActiveSocialIndex] = useState(0);
+  const [activeWebIndex, setActiveWebIndex] = useState(0);
+  const [modalProject, setModalProject] = useState<ProjectItem | null>(null);
+
+  const activeWeb = webProjects[activeWebIndex] || webProjects[0];
+  const activeSocial = socialMediaProjects[activeSocialIndex] || socialMediaProjects[0];
 
   return (
     <section id="portfolio" className="portfolio-section section">
       <div className="container">
+        {/* Section Header */}
         <div className="section-header">
-          <span className="section-badge">Our Work</span>
+          <span className="section-badge">Client Showcase</span>
           <h2 className="section-title">
-            Projects That <span className="text-gradient">Speak Results</span>
+            Crafting Digital Solutions That <span className="text-gradient">Drive Real Impact</span>
           </h2>
           <p className="section-description">
-            Real results from real clients - explore our portfolio of successful digital transformations
+            Explore our curated portfolio across web development, social media marketing, and cinematic video production
           </p>
         </div>
 
-        {/* Featured Web Project */}
-        <div className="portfolio-featured-section">
-          <h3 className="portfolio-section-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-              <line x1="3" y1="9" x2="21" y2="9" />
-              <line x1="9" y1="21" x2="9" y2="9" />
-            </svg>
-            Web Development
-          </h3>
-          {webProjects.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="portfolio-featured-card"
-            >
-              <div className="portfolio-featured-image-wrap">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="portfolio-featured-image"
-                />
-                <div className="portfolio-browser-frame">
-                  <div className="browser-dots">
-                    <span></span><span></span><span></span>
-                  </div>
-                  <div className="browser-url">{item.link}</div>
-                </div>
-              </div>
-              <div className="portfolio-featured-content">
-                <span className="portfolio-live-badge">
-                  <span className="live-dot"></span>
-                  Live Project
-                </span>
-                <h4 className="portfolio-featured-title">{item.title}</h4>
-                <p className="portfolio-featured-desc">{item.description}</p>
-                <span className="portfolio-visit-btn">
-                  Visit Website
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12,5 19,12 12,19" />
-                  </svg>
-                </span>
-              </div>
-            </a>
-          ))}
+        {/* Category Navigation Pills */}
+        <div className="portfolio-nav-tabs">
+          <button
+            className={`portfolio-tab-btn ${activeTab === "all" ? "active" : ""}`}
+            onClick={() => setActiveTab("all")}
+          >
+            <span className="tab-icon">✨</span>
+            <span>All Projects</span>
+            <span className="tab-count">{allProjectsList.length}</span>
+          </button>
+          <button
+            className={`portfolio-tab-btn ${activeTab === "web" ? "active" : ""}`}
+            onClick={() => setActiveTab("web")}
+          >
+            <span className="tab-icon">🌐</span>
+            <span>Web Development</span>
+            <span className="tab-count">{webProjects.length}</span>
+          </button>
+          <button
+            className={`portfolio-tab-btn ${activeTab === "social" ? "active" : ""}`}
+            onClick={() => setActiveTab("social")}
+          >
+            <span className="tab-icon">📱</span>
+            <span>Social Media Marketing</span>
+            <span className="tab-count">{socialMediaProjects.length}</span>
+          </button>
+          <button
+            className={`portfolio-tab-btn ${activeTab === "video" ? "active" : ""}`}
+            onClick={() => setActiveTab("video")}
+          >
+            <span className="tab-icon">🎬</span>
+            <span>Video & Reels</span>
+            <span className="tab-count">{videoProjects.length}</span>
+          </button>
         </div>
 
-        {/* Social Media Showcase */}
-        <div className="social-media-showcase">
-          <h3 className="portfolio-section-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-            </svg>
-            Social Media Marketing
-          </h3>
-
-          <div className="social-showcase-wrapper">
-            {/* Phone Mockup Display */}
-            <div className="phone-mockup-container">
-              <div className="phone-mockup">
-                <div className="phone-notch"></div>
-                <div className="phone-screen">
-                  <img
-                    src={socialMediaProjects[activeIndex].screenshot}
-                    alt={socialMediaProjects[activeIndex].title}
-                    className="phone-screen-image"
-                  />
-                </div>
-                <div className="phone-home-indicator"></div>
+        {/* ========================================================================= */}
+        {/* SECTION 1: WEB DEVELOPMENT SHOWCASE (Visible on "all" or "web") */}
+        {/* ========================================================================= */}
+        {(activeTab === "all" || activeTab === "web") && (
+          <div className="portfolio-block">
+            <div className="portfolio-block-header">
+              <div className="portfolio-block-meta">
+                <span className="portfolio-block-pill">Web & Platforms</span>
+                <h3 className="portfolio-block-title">Web Development & Digital Architecture</h3>
               </div>
-              <div className="phone-glow"></div>
+              <p className="portfolio-block-sub">
+                Scalable, high-converting platforms built with clean code and intuitive UI
+              </p>
             </div>
 
-            {/* Client Selector */}
-            <div className="social-clients-list">
-              <div className="clients-header">
-                <span className="clients-count">{socialMediaProjects.length} Active Clients</span>
-              </div>
-              {socialMediaProjects.map((client, index) => (
-                <div
-                  key={index}
-                  className={`client-card ${activeIndex === index ? 'active' : ''}`}
-                  onClick={() => setActiveIndex(index)}
-                  onMouseEnter={() => setActiveIndex(index)}
+            {/* Web Project Switcher Selector */}
+            <div className="web-project-selector">
+              {webProjects.map((proj, idx) => (
+                <button
+                  key={proj.id}
+                  className={`web-selector-pill ${activeWebIndex === idx ? "active" : ""}`}
+                  onClick={() => setActiveWebIndex(idx)}
                 >
-                  <div className="client-info">
-                    <h4 className="client-name">{client.title}</h4>
-                    <p className="client-desc">{client.description}</p>
-                    <span className="client-industry">{client.industry}</span>
+                  <span className="selector-indicator"></span>
+                  <span className="selector-title">{proj.title}</span>
+                  <span className="selector-tag">{proj.industry}</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Featured Web Browser Frame Card */}
+            <div className="web-featured-display">
+              <div className="web-browser-container">
+                <div className="web-browser-topbar">
+                  <div className="browser-window-dots">
+                    <span className="dot dot-red"></span>
+                    <span className="dot dot-yellow"></span>
+                    <span className="dot dot-green"></span>
                   </div>
+                  <div className="browser-address-bar">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>{activeWeb.link}</span>
+                  </div>
+                  <div className="browser-actions-icon">
+                    <a
+                      href={activeWeb.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="browser-external-link"
+                      title="Open Live Site"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Browser Body Screen */}
+                <div className="web-browser-screen">
+                  {activeWeb.image && (
+                    <img
+                      src={activeWeb.image}
+                      alt={activeWeb.title}
+                      className="web-screen-img"
+                    />
+                  )}
+                  <div className="web-screen-overlay">
+                    <a
+                      href={activeWeb.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary btn-sm"
+                    >
+                      Visit Live Platform
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12,5 19,12 12,19" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Web Project Info Panel */}
+              <div className="web-info-panel">
+                <div className="web-info-header">
+                  <span className="portfolio-live-badge">
+                    <span className="live-dot"></span>
+                    Verified Live Project
+                  </span>
+                  <span className="web-industry-badge">{activeWeb.industry}</span>
+                </div>
+
+                <h4 className="web-panel-title">{activeWeb.title}</h4>
+                <p className="web-panel-tagline">{activeWeb.tagline}</p>
+                <p className="web-panel-desc">{activeWeb.description}</p>
+
+                {/* Metrics Highlights */}
+                <div className="web-metrics-grid">
+                  {activeWeb.metrics.map((m, mIdx) => (
+                    <div key={mIdx} className="metric-chip">
+                      <div className="metric-chip-value">{m.value}</div>
+                      <div className="metric-chip-label">{m.label}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Tags */}
+                <div className="project-tags-list">
+                  {activeWeb.tags.map((tag, tIdx) => (
+                    <span key={tIdx} className="project-tag-pill">{tag}</span>
+                  ))}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="web-panel-actions">
                   <a
-                    href={client.link}
+                    href={activeWeb.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="client-instagram-link"
-                    onClick={(e) => e.stopPropagation()}
+                    className="btn btn-primary"
                   >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    Open Live Platform
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
                     </svg>
                   </a>
+                  <button
+                    className="btn btn-secondary"
+                    onClick={() => setModalProject(activeWeb)}
+                  >
+                    View Case Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* SECTION 2: SOCIAL MEDIA MARKETING SHOWCASE (Visible on "all" or "social") */}
+        {/* ========================================================================= */}
+        {(activeTab === "all" || activeTab === "social") && (
+          <div className="portfolio-block">
+            <div className="portfolio-block-header">
+              <div className="portfolio-block-meta">
+                <span className="portfolio-block-pill">Social Growth</span>
+                <h3 className="portfolio-block-title">Social Media Marketing & Brand Scaling</h3>
+              </div>
+              <p className="portfolio-block-sub">
+                Interactive mobile studio showcasing real brand transformation and high-converting campaigns
+              </p>
+            </div>
+
+            <div className="social-studio-layout">
+              {/* Smartphone Simulator */}
+              <div className="phone-studio-column">
+                <div className="studio-phone-wrapper">
+                  <div className="studio-phone-case">
+                    <div className="studio-phone-speaker"></div>
+                    <div className="studio-phone-notch"></div>
+                    <div className="studio-phone-display">
+                      {activeSocial.screenshot && (
+                        <img
+                          src={activeSocial.screenshot}
+                          alt={activeSocial.title}
+                          className="studio-phone-screenshot"
+                        />
+                      )}
+                      <div className="phone-bottom-bar"></div>
+                    </div>
+                  </div>
+                  <div className="studio-phone-glow"></div>
+                </div>
+
+                {/* Quick Phone Controls Card */}
+                <div className="phone-current-meta">
+                  <div className="meta-brand-row">
+                    <div className="meta-avatar-initial">
+                      {activeSocial.title.substring(0, 2).toUpperCase()}
+                    </div>
+                    <div>
+                      <div className="meta-brand-name">{activeSocial.title}</div>
+                      <div className="meta-brand-handle">{activeSocial.handle}</div>
+                    </div>
+                  </div>
+                  <a
+                    href={activeSocial.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="meta-insta-btn"
+                  >
+                    View Profile
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              {/* Client Selector & Case Overview */}
+              <div className="social-selector-column">
+                <div className="social-list-header">
+                  <span className="social-count-badge">
+                    <span className="instagram-gradient-dot"></span>
+                    {socialMediaProjects.length} Active Client Portfolios
+                  </span>
+                  <span className="social-hint-text">Select a client to preview live campaign</span>
+                </div>
+
+                <div className="social-clients-stack">
+                  {socialMediaProjects.map((client, cIdx) => (
+                    <div
+                      key={client.id}
+                      className={`social-client-card ${activeSocialIndex === cIdx ? "active" : ""}`}
+                      onClick={() => setActiveSocialIndex(cIdx)}
+                      onMouseEnter={() => setActiveSocialIndex(cIdx)}
+                    >
+                      <div className="social-card-accent"></div>
+                      <div className="social-card-main">
+                        <div className="social-card-top">
+                          <h4 className="social-client-title">{client.title}</h4>
+                          <span className="social-client-industry">{client.industry}</span>
+                        </div>
+                        <p className="social-client-tagline">{client.tagline}</p>
+                        
+                        {/* Mini Metrics in Card */}
+                        <div className="social-mini-metrics">
+                          {client.metrics.slice(0, 2).map((m, idx) => (
+                            <span key={idx} className="mini-metric-badge">
+                              <strong>{m.value}</strong> {m.label}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="social-card-actions">
+                        <button
+                          className="social-details-btn"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setModalProject(client);
+                          }}
+                          title="Open Detailed Case"
+                        >
+                          Case Details
+                        </button>
+                        <a
+                          href={client.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="social-insta-icon-btn"
+                          onClick={(e) => e.stopPropagation()}
+                          aria-label={`Open Instagram for ${client.title}`}
+                        >
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* SECTION 3: VIDEO & REELS PRODUCTION (Visible on "all" or "video") */}
+        {/* ========================================================================= */}
+        {(activeTab === "all" || activeTab === "video") && (
+          <div className="portfolio-block">
+            <div className="portfolio-block-header">
+              <div className="portfolio-block-meta">
+                <span className="portfolio-block-pill">Video Production</span>
+                <h3 className="portfolio-block-title">Cinematic Video Editing & Social Reels</h3>
+              </div>
+              <p className="portfolio-block-sub">
+                Broadcast-grade editing, color grading, sound design, and viral short-form storytelling
+              </p>
+            </div>
+
+            <div className="video-cards-grid">
+              {videoProjects.map((video) => (
+                <div key={video.id} className="video-master-card">
+                  {/* Vertical Phone Frame with Interactive Embed */}
+                  <div className="video-embed-frame">
+                    <div className="video-embed-notch"></div>
+                    <div className="video-embed-screen">
+                      <iframe
+                        src={video.embedUrl}
+                        className="instagram-media-frame"
+                        allowFullScreen={true}
+                        scrolling="no"
+                        title={video.title}
+                      ></iframe>
+                    </div>
+                    <div className="video-embed-bar"></div>
+                  </div>
+
+                  {/* Video Content & Metadata */}
+                  <div className="video-info-content">
+                    <div className="video-meta-top">
+                      <span className="video-category-tag">{video.categoryLabel}</span>
+                      <span className="video-badge-pro">4K Master</span>
+                    </div>
+
+                    <h4 className="video-project-title">{video.title}</h4>
+                    <p className="video-project-tagline">{video.tagline}</p>
+                    <p className="video-project-desc">{video.description}</p>
+
+                    {/* Metrics */}
+                    <div className="video-metrics-row">
+                      {video.metrics.map((m, mIdx) => (
+                        <div key={mIdx} className="video-metric-pill">
+                          <span className="video-metric-name">{m.label}:</span>
+                          <span className="video-metric-val">{m.value}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Tags */}
+                    <div className="video-tags-container">
+                      {video.tags.map((tag, tIdx) => (
+                        <span key={tIdx} className="video-tag-item">{tag}</span>
+                      ))}
+                    </div>
+
+                    {/* Action Links */}
+                    <div className="video-action-links">
+                      <a
+                        href={video.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary btn-sm"
+                      >
+                        Watch on Instagram
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                      </a>
+                      <button
+                        className="btn btn-secondary btn-sm"
+                        onClick={() => setModalProject(video)}
+                      >
+                        Production Details
+                      </button>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        )}
 
-        {/* Video Editing Showcase */}
-        <div className="video-showcase">
-          <h3 className="portfolio-section-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="23 7 16 12 23 17 23 7" />
-              <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-            </svg>
-            Video Editing
-          </h3>
-
-          <div className="video-grid">
-            {videoProjects.map((project, index) => (
-              <div key={index} className="video-card">
-                <div className="video-phone-mockup">
-                  <div className="video-phone-notch"></div>
-                  <div className="video-phone-screen">
-                    <iframe
-                      src={project.embedUrl}
-                      className="instagram-media instagram-media-rendered"
-                      allowFullScreen={true}
-                      frameBorder="0"
-                      scrolling="no"
-                      style={{
-                        background: 'transparent',
-                        border: 'none',
-                        overflow: 'hidden',
-                        height: '100%',
-                        width: '100%',
-                        display: 'block'
-                      }}
-                    ></iframe>
-                  </div>
-                  <div className="video-phone-indicator"></div>
-                </div>
-
-                <div className="video-card-content">
-                  <h4 className="video-card-title">{project.title}</h4>
-                  <p className="video-card-desc">{project.description}</p>
-                  
-                  <div className="video-card-tags">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="video-tag">{tag}</span>
-                    ))}
-                  </div>
-
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="video-link-btn"
-                  >
-                    Watch on Instagram
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            ))}
+        {/* Bottom Banner inside Portfolio */}
+        <div className="portfolio-footer-cta">
+          <div className="cta-mini-content">
+            <h4 className="cta-mini-title">Have a project in mind?</h4>
+            <p className="cta-mini-desc">Let&apos;s build a digital experience that transforms your brand and drives measurable growth.</p>
           </div>
+          <a href="#contact" className="btn btn-primary">
+            Start Your Project Today
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </div>
+
+      {/* ========================================================================= */}
+      {/* QUICK-VIEW CASE STUDY MODAL */}
+      {/* ========================================================================= */}
+      {modalProject && (
+        <div className="case-modal-backdrop" onClick={() => setModalProject(null)}>
+          <div className="case-modal-dialog" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="case-modal-close"
+              onClick={() => setModalProject(null)}
+              aria-label="Close modal"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+
+            <div className="case-modal-header">
+              <div className="case-modal-category">
+                <span className="category-indicator"></span>
+                {modalProject.categoryLabel}
+              </div>
+              <h3 className="case-modal-title">{modalProject.title}</h3>
+              <p className="case-modal-subtitle">{modalProject.tagline}</p>
+            </div>
+
+            <div className="case-modal-body">
+              {/* Media Preview inside Modal */}
+              <div className="case-modal-media">
+                {modalProject.image ? (
+                  <img
+                    src={modalProject.image}
+                    alt={modalProject.title}
+                    className="case-modal-img"
+                  />
+                ) : modalProject.screenshot ? (
+                  <img
+                    src={modalProject.screenshot}
+                    alt={modalProject.title}
+                    className="case-modal-img"
+                  />
+                ) : modalProject.embedUrl ? (
+                  <iframe
+                    src={modalProject.embedUrl}
+                    className="case-modal-iframe"
+                    title={modalProject.title}
+                    allowFullScreen={true}
+                  ></iframe>
+                ) : null}
+              </div>
+
+              {/* Case Study Details */}
+              <div className="case-modal-content">
+                {modalProject.detailedCase && (
+                  <>
+                    <div className="case-section-item">
+                      <h5>Client & Background</h5>
+                      <p>{modalProject.detailedCase.client} ({modalProject.industry})</p>
+                    </div>
+
+                    <div className="case-section-item">
+                      <h5>The Objective</h5>
+                      <p>{modalProject.detailedCase.objective}</p>
+                    </div>
+
+                    <div className="case-section-item">
+                      <h5>Our Solution</h5>
+                      <p>{modalProject.detailedCase.solution}</p>
+                    </div>
+
+                    <div className="case-section-item">
+                      <h5>Key Deliverables</h5>
+                      <ul className="case-deliverables-list">
+                        {modalProject.detailedCase.deliverables.map((item, dIdx) => (
+                          <li key={dIdx}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" strokeWidth="2.5">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                )}
+
+                {/* Metrics */}
+                <div className="case-modal-metrics">
+                  <h5>Impact Metrics</h5>
+                  <div className="case-metrics-grid">
+                    {modalProject.metrics.map((m, idx) => (
+                      <div key={idx} className="case-metric-box">
+                        <span className="case-metric-val">{m.value}</span>
+                        <span className="case-metric-lbl">{m.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Tags */}
+                <div className="case-modal-tags">
+                  {modalProject.tags.map((tag, idx) => (
+                    <span key={idx} className="case-tag-chip">{tag}</span>
+                  ))}
+                </div>
+
+                {/* Action CTA */}
+                <div className="case-modal-footer">
+                  <a
+                    href={modalProject.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                  >
+                    Open Live Project
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                  <button
+                    className="btn btn-secondary"
+                    onClick={() => setModalProject(null)}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
@@ -861,7 +1366,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Products />
         <Services />
         <Portfolio />
         <Process />
