@@ -25,7 +25,7 @@ function Header() {
 
           <nav className="nav">
             <a href="#services" className="nav-link">Services</a>
-            <a href="#portfolio" className="nav-link">Portfolio</a>
+            {/* <a href="#portfolio" className="nav-link">Portfolio</a> */}
             <a href="#process" className="nav-link">Process</a>
             <a href="#testimonials" className="nav-link">Testimonials</a>
             <a href="#contact" className="nav-link">Contact</a>
@@ -51,7 +51,7 @@ function Header() {
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <nav className="mobile-nav">
           <a href="#services" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</a>
-          <a href="#portfolio" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Portfolio</a>
+          {/* <a href="#portfolio" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Portfolio</a> */}
           <a href="#process" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Process</a>
           <a href="#testimonials" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
           <a href="#contact" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a>
@@ -102,8 +102,8 @@ function Hero() {
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
-            <a href="#portfolio" className="btn btn-secondary">
-              View Our Work
+            <a href="#services" className="btn btn-secondary">
+              Explore Services
             </a>
           </div>
 
@@ -1331,7 +1331,7 @@ function Footer() {
             <h4>Company</h4>
             <ul className="footer-links">
               <li><a href="/about">About Us</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
+              {/* <li><a href="#portfolio">Portfolio</a></li> */}
               <li><a href="#process">Our Process</a></li>
               <li><a href="#testimonials">Testimonials</a></li>
               <li><a href="#contact">Contact</a></li>
@@ -1367,7 +1367,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
-        <Portfolio />
+        {/* <Portfolio /> */}
         <Process />
         <Testimonials />
         <CTA />
