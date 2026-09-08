@@ -1,68 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
-// Header Component
-function Header() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return (
-    <header className={`header ${scrolled ? "scrolled" : ""}`}>
-      <div className="container">
-        <div className="header-inner">
-          <a href="/" className="logo">
-            <span className="logo-text">Akshar Production & Technology</span>
-          </a>
-
-          <nav className="nav">
-            <a href="#services" className="nav-link">Services</a>
-            {/* <a href="#portfolio" className="nav-link">Portfolio</a> */}
-            <a href="#process" className="nav-link">Process</a>
-            <a href="#testimonials" className="nav-link">Testimonials</a>
-            <a href="#contact" className="nav-link">Contact</a>
-          </nav>
-
-          <div className="header-cta">
-            <a href="#contact" className="btn btn-primary">Get Started</a>
-          </div>
-
-          <button
-            className={`mobile-menu-btn ${mobileMenuOpen ? 'open' : ''}`}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <nav className="mobile-nav">
-          <a href="#services" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</a>
-          {/* <a href="#portfolio" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Portfolio</a> */}
-          <a href="#process" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Process</a>
-          <a href="#testimonials" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
-          <a href="#contact" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-          <div style={{ marginTop: '24px' }}>
-            <a href="#contact" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>Get Started</a>
-          </div>
-        </nav>
-      </div>
-    </header>
-  );
-}
+import { useState } from "react";
+import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
+import { getServiceIcon } from "@/components/ServiceIcons";
 
 // Hero Section
 function Hero() {
@@ -86,8 +29,8 @@ function Hero() {
           </div>
 
           <h1 className="hero-title">
-            <span>We Create</span>
-            <span className="text-gradient">Digital Excellence</span>
+            <span>We Create High-Impact</span>
+            <span className="text-gradient">Digital Experiences</span>
           </h1>
 
           <p className="hero-description lead">
@@ -189,15 +132,15 @@ function Services() {
         <div className="services-grid">
           {services.map((service, index) => (
             <div key={index} className="service-card">
-              <div className="service-icon">{service.icon}</div>
+              <div className="service-icon-badge">{getServiceIcon(service.title)}</div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
-              <a href={service.link} className="service-link">
+              <Link href={service.link} className="service-link">
                 Learn More
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           ))}
         </div>
@@ -1226,136 +1169,11 @@ function Contact() {
           </p>
         </div>
 
-        <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <form action="https://api.web3forms.com/submit" method="POST">
-            {/* Web3Forms Access Key */}
-            <input type="hidden" name="access_key" value="5e40aef4-2df8-4d0a-9137-198eced2cfaf" />
-
-            {/* Redirect after submission (optional) */}
-            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
-
-            {/* Email subject */}
-            <input type="hidden" name="subject" value="New Contact Form Submission - Akshar Production" />
-
-            {/* From name in email */}
-            <input type="hidden" name="from_name" value="Akshar Production Website" />
-
-            <div className="form-group">
-              <label className="form-label">Your Name</label>
-              <input type="text" name="name" className="form-input" placeholder="John Doe" required />
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Email Address</label>
-              <input type="email" name="email" className="form-input" placeholder="john@example.com" required />
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Phone Number</label>
-              <input type="tel" name="phone" className="form-input" placeholder="+91 98765 43210" />
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Service Interested In</label>
-              <select name="service" className="form-input">
-                <option value="">Select a service</option>
-                <option value="Web Development">Web Development</option>
-                <option value="Social Media Marketing">Social Media Marketing</option>
-                <option value="Paid Advertising">Paid Advertising</option>
-                <option value="Graphic Design">Graphic Design</option>
-                <option value="Video Editing">Video Editing</option>
-                <option value="Web Applications">Web Applications</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Your Message</label>
-              <textarea name="message" className="form-textarea" placeholder="Tell us about your project..." rows={5}></textarea>
-            </div>
-
-            <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-              Send Message
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-              </svg>
-            </button>
-          </form>
+        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
+          <ContactForm />
         </div>
       </div>
     </section>
-  );
-}
-
-// Footer Component
-function Footer() {
-  return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-grid">
-          <div className="footer-brand">
-            <a href="/" className="logo">
-              <span className="logo-text">Akshar Production & Technology</span>
-            </a>
-            <p>
-              Your trusted partner for digital transformation. We create exceptional digital experiences that drive growth.
-            </p>
-            <div className="footer-social">
-              <a href="https://www.facebook.com/profile.php?id=61572490632035" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-              </a>
-              <a href="https://www.instagram.com/aksharproduction/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div className="footer-column">
-            <h4>Services</h4>
-            <ul className="footer-links">
-              <li><a href="/services/web-development">Web Development</a></li>
-              <li><a href="/services/social-media-marketing">Social Media Marketing</a></li>
-              <li><a href="/services/paid-advertising">Paid Advertising</a></li>
-              <li><a href="/services/graphic-design">Graphic Design</a></li>
-              <li><a href="/services/video-editing">Video Editing</a></li>
-            </ul>
-          </div>
-
-          <div className="footer-column">
-            <h4>Company</h4>
-            <ul className="footer-links">
-              <li><a href="/about">About Us</a></li>
-              {/* <li><a href="#portfolio">Portfolio</a></li> */}
-              <li><a href="#process">Our Process</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-
-          <div className="footer-column">
-            <h4>Contact</h4>
-            <ul className="footer-links">
-              <li><a href="mailto:work.chiragmali@gmail.com">work.chiragmali@gmail.com</a></li>
-              <li>Rajasthan, India</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p>© 2023-2024 Akshar Production and Technology. All rights reserved.</p>
-          <div className="footer-legal">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
-          </div>
-        </div>
-      </div>
-    </footer>
   );
 }
 
